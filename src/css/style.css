@@ -1,0 +1,428 @@
+.background-video {
+	/* position: absolute;
+	right: 0;
+	bottom: 0; 
+	z-index: -1;
+	height: 101%;
+	width: 100%; */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+#brand{
+	margin-right: 4px;
+}
+
+#logo-span {
+	color: yellow;
+}
+
+@media (min-aspect-ratio:16/9) {
+	.background-video {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-aspect-ratio:16/16) {
+	.background-video {
+		width: auto;
+		height: 100%;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+nav {
+	display: flex;
+	height: 80px;
+	width: 100%;
+	background: #1b1b1b;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 50px 0 100px;
+	flex-wrap: wrap;
+	opacity: 80%;
+	z-index: 2;
+}
+
+nav .logo {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
+	opacity: 100%;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	opacity: 100%;
+}
+
+nav ul li {
+	margin: 0 5px;
+	opacity: 100%;
+}
+
+nav ul li a {
+	color: #f2f2f2;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 15px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+	opacity: 100%;
+}
+
+nav ul li a.active {
+	color: #111;
+	background: #fff;
+	opacity: 100%;
+}
+
+nav ul li a:hover {
+	color: #111;
+	background: yellow;
+	opacity: 100%;
+}
+
+nav .menu-btn i {
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	display: none;
+	opacity: 100%;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	nav {
+		padding: 0 40px 0 50px;
+	}
+}
+
+/*logo size*/
+@media (max-width:1180px){
+	nav .logo,#logo-span{
+		font-size: 22px;
+	}
+}
+@media (max-width:1100px){
+	nav .logo,#logo-span{
+		font-size: 20px;
+	}
+}
+@media (max-width:1080px){
+	nav .logo,#logo-span{
+		font-size: 19px;
+	}
+}
+@media (max-width:1070px){
+	nav .logo,#logo-span{
+		font-size: 18px;
+	}
+}
+@media (max-width:1050px){
+	nav .logo,#logo-span{
+		font-size: 17px;
+	}
+}
+
+/*end logo size css*/
+
+@media (max-width: 920px) {
+	nav .menu-btn i {
+		display: block;
+	}
+	
+
+	#click:checked~.menu-btn i:before {
+		content: "\f00d";
+	}
+
+	nav ul {
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		background: #111;
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		display: block;
+		transition: all 0.3s ease;
+	}
+
+	#click:checked~ul {
+		left: 0;
+	}
+
+	nav ul li {
+		width: 100%;
+		margin: 40px 0;
+	}
+
+	nav ul li a {
+		width: 100%;
+		margin-left: -100%;
+		display: block;
+		font-size: 20px;
+		transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	#click:checked~ul li a {
+		margin-left: 0px;
+	}
+
+	nav ul li a.active,
+	nav ul li a:hover {
+		background: none;
+		color: cyan;
+	}
+
+	.puf {
+		max-width: 320px;
+		margin: 5%;
+		border-radius: 16px;
+	}
+
+	a .liquid {
+		position: absolute;
+		top: -80px;
+		left: 0;
+		width: 200px;
+		height: 200px;
+		background: #486bdf;
+		box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+		transition: .5s;
+	}
+
+	a .liquid::after,
+	a .liquid::before {
+		content: '';
+		width: 200%;
+		height: 200%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -75%);
+		background: rgb(170, 169, 169);
+	}
+
+	a .liquid::before {
+		border-radius: 45%;
+		background: rgb(204, 204, 204);
+		animation: animate 5s linear infinite;
+	}
+
+	a .liquid::after {
+		border-radius: 40%;
+		background: rgba(255, 255, 255, 0.5);
+		animation: animate 5s linear infinite;
+	}
+
+	a:hover .liquid {
+		top: -120px;
+	}
+
+	@keyframes animate {
+		0% {
+			transform: translate(-50%, -75%) rotate(0deg);
+		}
+
+		100% {
+			transform: translate(-50%, -75%) rotate(360deg);
+		}
+	}
+}
+
+.dv-header-promo-grey {
+	position: relative;
+	display: inline-block;
+	background-color: rgb(255, 255, 255);
+	opacity: 100%;
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-right: 20px;
+	max-width: 600px;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgb(49 50 56 / 10%);
+	border-radius: 16px;
+	z-index: -1;
+}
+
+
+.dv-header-promo-grey h1.heading {
+	position: relative;
+	font-size: 40px;
+	line-height: 52px;
+	color: #111;
+	padding: 16px 16px 16px 0px;
+	margin: 50px;
+	font-weight: 700;
+	letter-spacing: 0.5;
+}
+
+.puf {
+	display: inline-block;
+	background-color: rgb(255, 255, 255);
+	opacity: 100%;
+	margin-left: 5%;
+	margin-top: 5%;
+	max-width: 500px;
+	padding: 24px;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgb(49 50 56 / 10%);
+	border-radius: 16px;
+	/* z-index: inherit; */
+}
+
+.puf-main {
+	display: block;
+	background-color: whitesmoke;
+	margin-top: 80px;
+	padding-bottom: 50px;
+	opacity: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 16px;
+}
+
+.pin-icon-pu {
+	position: relative;
+	top: 32px;
+	left: 6px;
+	width: 20px;
+	height: 20px;
+	fill: #706e6d;
+
+}
+
+.pin-icon-d {
+	position: relative;
+	top: 32px;
+	left: 6px;
+	width: 20px;
+	height: 20px;
+	fill: #706e6d;
+}
+
+.LandingMiniFormAddress {
+	width: 100%;
+	padding: 10px 10px 10px 30px;
+	height: 42px;
+	border-radius: 0;
+	border: solid 1px #bbc1d2;
+	font-size: 14px;
+	transition: all 0.125s ease-in;
+	appearance: none;
+}
+
+.LandingMiniFormAddress:hover {
+	fill: #706e6d;
+}
+
+p.description {
+	font-family: 'Times New Roman';
+	font-size: 20px;
+	line-height: 28px;
+	color: #2d2928;
+	margin-bottom: 32px;
+	margin-top: 0;
+	margin-left: 45px;
+	margin-right: 20px;
+	z-index: inherit;
+}
+
+/* Calculate the price button animation */
+#price_calc {
+	position: relative;
+	padding: 10px 20px;
+	margin-top: 50px;
+	margin-left: 10px;
+	display: block;
+	text-decoration: none;
+	/* text-transform: uppercase; */
+	width: 200px;
+	overflow: hidden;
+	border-radius: 40px;
+}
+
+#price_calc_span {
+	padding: 2px;
+	position: relative;
+	color: #fff;
+	font-size: 20px;
+	font-family: Arial;
+	letter-spacing: 6px;
+	z-index: 1;
+	color: rgb(56, 55, 55);
+}
+
+a .liquid {
+	position: absolute;
+	top: -80px;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	background: #486bdf;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+	transition: .5s;
+}
+
+a .liquid::after,
+a .liquid::before {
+	content: '';
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -75%);
+	/* background: #000; */
+	background: rgb(170, 169, 169);
+}
+
+a .liquid::before {
+	border-radius: 45%;
+	background: rgb(204, 204, 204);
+	animation: animate 5s linear infinite;
+}
+
+a .liquid::after {
+	border-radius: 40%;
+	background: rgba(255, 255, 255, 0.5);
+	animation: animate 5s linear infinite;
+}
+
+a:hover .liquid {
+	top: -120px;
+}
+
+@keyframes animate {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}

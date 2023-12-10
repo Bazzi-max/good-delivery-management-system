@@ -1,0 +1,263 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.odRoot {
+	position: absolute;
+	height: 230%;
+	width: 100%;
+	background-position: 5% 40%;
+	background-repeat: repeat-y;
+	background-size: contain;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/DBMSProject/images/download.png);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.input-group {
+	top: 120px;
+	left: 30px;
+	position: absolute;
+	margin-left: 20px;
+	width: 280px;
+	transition: 0.5s;
+}
+
+.input-field {
+	font-size: medium;
+	width: 100%;
+	padding: 10px 0px;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.submit-btn {
+	font-size: 18px;
+	width: 25%;
+	margin-left: 3%;
+	margin-top: 20px;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	background: linear-gradient(to right, #1bd870, #073aa7);
+	outline: none;
+	border: 10px;
+	border-radius: 16px;
+}
+
+.form-box {
+	width: 800px;
+	height: 750px;
+	position: cover;
+	margin: 6% auto;
+	margin-top: 0%;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5px;
+	border-radius: 8px;
+}
+
+.pickAddress,
+.dropAddress {
+	margin-left: 25px;
+	margin-top: 14px;
+}
+
+
+.fas {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+.order {
+	margin-top: 20px;
+	margin-left: 21%;
+	font-size: 48px;
+	font-weight: bold;
+	color: white;
+}
+
+.deliveryOption {
+	text-align: center;
+	display: flex;
+	width: 800px;
+	height: 420px;
+	position: relative;
+	margin: 6% auto;
+	margin-top: 1%;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.flex-container-1,
+.flex-container-2 {
+	padding-left: 140px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.flex-container-2 {
+	padding-left: 10px;
+}
+
+.deliverNow {
+	margin-top: 20px;
+	margin-left: 10px;
+	padding: 12px;
+	border: 3px solid rgb(105, 107, 109);
+	/*--#1377EB*/
+	height: 350px;
+	width: 200px;
+	border-radius: 10px;
+}
+
+#deliverNow_id:hover,
+#deliverLater:hover {
+	border: 3px solid #1377EB;
+}
+
+
+#deliverNow,
+#deliverNow_id,
+#deliverLater {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.assign,
+.assign-2,
+.assign-3 {
+	font-size: 12px;
+	margin-top: 0px;
+	color: #85786c;
+}
+
+.assign-2,
+.assign-3 {
+	margin-top: 10px;
+	color: #3d3833;
+}
+
+.assign-3 {
+	font-size: 14px;
+	color: black;
+}
+
+.assign-4 {
+	padding: 5px;
+	font-size: 16px;
+	margin-bottom:0px;
+	color: black;
+	font-weight: 500;
+}
+
+.dividerLine {
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: #4e4e4e;
+	height: 1px;
+	width: 100%;
+	margin: 12px 0;
+}
+
+.fa-shopping-bag {
+	margin-bottom: 10px;
+}
+
+.pin-icon-pu,
+.pin-icon-d {
+	position: relative;
+	top: 5px;
+	left: 32px;
+	width: 20px;
+	height: 20px;
+	fill: #706e6d;
+
+}
+
+.LandingMiniFormAddress {
+	width: 50%;
+	margin-left: 0px;
+	margin-top: 20px;
+	padding: 10px 10px 10px 30px;
+	height: 42px;
+	border-radius: 0;
+	border: solid 1px #bbc1d2;
+	font-size: 14px;
+	transition: all 0.125s ease-in;
+	appearance: none;
+}
+
+.LandingMiniFormAddress:hover {
+	fill: #706e6d;
+}
+
+.pick-up-number,
+.drop-off-number {
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+.phoneNumber,
+#pick-up-date,
+#pick-up-time {
+	margin-top:0px;
+	padding-left: 5px;
+	width: 20%;
+	height: 20%;
+	font-size: 16px;
+	margin-bottom:10px;
+}
+
+.phoneNumber {
+	margin-bottom: 10px;
+}
+
+.pickupAddress,
+.dropoffAddress {
+	font-weight: bold;
+}
+
+.payment_amt {
+	margin-top: 14px;
+	font-weight: bolder;
+}
+
+#Payment-Amount {
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+#calculatePrice {
+	font-size: 16px;
+	width: 20%;
+	margin-top: 20px;
+	padding: 10px 20px;
+	cursor: pointer;
+	/* display: block; */
+	background: green;
+	outline: none;
+	border: 10px;
+	border-radius: 12px;
+	font-weight: bold;
+}
+
+.form-select{
+	height:30px;
+	font-size:16px;
+	font-weight:bold;
+	width:150px;
+	margin-top:8px;
+	margin-left:0px;
+}
